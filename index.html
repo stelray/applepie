@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Рецепт яблочного пирога</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 10%;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #93c5fd;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 22px;
+      color: #dbeafe;
+      margin-bottom: 40px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      border-radius: 14px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #2563eb;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px 10% 100px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(12px);
+      padding: 30px;
+      border-radius: 24px;
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.18);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #dbeafe;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #cbd5e1;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Apple Pie</div>
+
+    
+  </header>
+
+  <section class="hero" id="recipe">
+    <h1>Вкусный яблочный пирог 🍎</h1>
+
+    <p>
+      Здесь вы найдёте простой и вкусный рецепт домашнего яблочного пирога, который легко приготовить дома.
+    </p>
+
+    <div class="buttons">
+      <button class="btn btn-primary" onclick="showMessage()">
+        Показать рецепт
+      </button>
+
+      <button class="btn btn-secondary" onclick="showTips()">
+        Советы
+      </button>
+    </div>
+  </section>
+
+  <section class="cards" id="ingredients">
+    <div class="card">
+      <h3>🍎 Ингредиенты</h3>
+      <p>
+        Яблоки, мука, яйца, сахар и немного корицы.
+      </p>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>👨‍🍳 Приготовление</h3>
+      <p>
+        Смешайте ингредиенты, добавьте яблоки и выпекайте в духовке.
+      </p>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Время выпечки</h3>
+      <p>
+        Выпекать около 40 минут при температуре 180°C.
+      </p>
+      </p>
+    </div>
+  </section>
+
+  <section class="cards" id="steps">
+    <div class="card">
+      <h3>1️⃣ Подготовка</h3>
+      <p>
+        Нарежьте яблоки тонкими ломтиками и подготовьте тесто.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>2️⃣ Выпечка</h3>
+      <p>
+        Поместите пирог в духовку на 40 минут при 180°C.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>3️⃣ Подача</h3>
+      <p>
+        Дайте пирогу немного остыть и подавайте к чаю.
+      </p>
+    </div>
+  </section>
+
+  <footer id="footer">
+    © 2026 Рецепт яблочного пирога
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert('Яблочный пирог готовится примерно 40 минут!');
+    }
+
+    function showTips() {
+      alert('Совет: добавьте корицу и немного ванили для лучшего вкуса 🍎');
+    }
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
